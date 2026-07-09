@@ -1,0 +1,13 @@
+{
+  "name": "pro-vscode-tools",
+  "displayName": "Pro VSCode Tools",
+  "description": "Productivity tools and utilities for Visual Studio Code developers.",
+  "version": "1.0.0",
+  "publisher": "alvarosiles",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Productivity"
+  ]
+}
