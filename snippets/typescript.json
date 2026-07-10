@@ -1,0 +1,7 @@
+{
+  "Pro Tools: interface": {
+    "prefix": "ptinterface",
+    "body": ["export interface ${1:Name} {", "  $0", "}"],
+    "description": "Create a TypeScript interface"
+  }
+}

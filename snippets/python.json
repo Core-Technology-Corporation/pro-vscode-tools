@@ -1,0 +1,7 @@
+{
+  "Pro Tools: main guard": {
+    "prefix": "ptmain",
+    "body": ["if __name__ == \"__main__\":", "    $0"],
+    "description": "Create a Python main guard"
+  }
+}

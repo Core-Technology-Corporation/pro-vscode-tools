@@ -1,0 +1,7 @@
+{
+  "Pro Tools: console.log": {
+    "prefix": "ptlog",
+    "body": ["console.log(${1:value});"],
+    "description": "Log output to console"
+  }
+}

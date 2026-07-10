@@ -1,13 +1,116 @@
 {
   "name": "pro-vscode-tools",
   "displayName": "Pro VSCode Tools",
-  "description": "Productivity tools and utilities for Visual Studio Code developers.",
-  "version": "1.0.0",
+  "description": "Productivity tools and utilities for Visual Studio Code developers: scaffolding, format conversion, workspace helpers and terminal shortcuts.",
+  "version": "0.0.1",
   "publisher": "alvarosiles",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvarosiles/pro-vscode-tools"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
-    "Productivity"
-  ]
+    "Other",
+    "Snippets",
+    "Formatters"
+  ],
+  "keywords": [
+    "productivity",
+    "scaffolding",
+    "generator",
+    "workspace",
+    "terminal"
+  ],
+  "icon": "media/icon.png",
+  "activationEvents": [],
+  "main": "./out/src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "proVscodeTools.formatJsonToTs",
+        "title": "Pro Tools: Convert JSON to TypeScript Interface",
+        "category": "Pro Tools"
+      },
+      {
+        "command": "proVscodeTools.generateComponent",
+        "title": "Pro Tools: Generate Component",
+        "category": "Pro Tools"
+      },
+      {
+        "command": "proVscodeTools.createProjectStructure",
+        "title": "Pro Tools: Create Project Structure",
+        "category": "Pro Tools"
+      },
+      {
+        "command": "proVscodeTools.runQuickCommand",
+        "title": "Pro Tools: Run Quick Terminal Command",
+        "category": "Pro Tools"
+      },
+      {
+        "command": "proVscodeTools.refreshQuickActions",
+        "title": "Pro Tools: Refresh Quick Actions",
+        "category": "Pro Tools",
+        "icon": "$(refresh)"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "proVscodeTools.quickActions",
+          "name": "Pro Tools: Quick Actions"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "proVscodeTools.refreshQuickActions",
+          "when": "view == proVscodeTools.quickActions",
+          "group": "navigation"
+        }
+      ]
+    },
+    "snippets": [
+      { "language": "javascript", "path": "./snippets/javascript.json" },
+      { "language": "typescript", "path": "./snippets/typescript.json" },
+      { "language": "python", "path": "./snippets/python.json" }
+    ],
+    "configuration": {
+      "title": "Pro VSCode Tools",
+      "properties": {
+        "proVscodeTools.defaultComponentFramework": {
+          "type": "string",
+          "enum": ["react", "vue", "laravel"],
+          "default": "react",
+          "description": "Default framework used by the 'Generate Component' command."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.x",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vscode/test-electron": "^2.3.9",
+    "@vscode/vsce": "^2.24.0",
+    "eslint": "^8.57.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.3.0",
+    "typescript": "^5.4.0"
+  }
 }
