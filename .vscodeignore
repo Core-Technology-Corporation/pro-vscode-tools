@@ -1,0 +1,13 @@
+.vscode/**
+.gitignore
+src/**
+test/**
+scripts/**
+out/test/**
+tsconfig.json
+eslint.config.js
+images/**
+resources/**
+**/*.map
+.git/**
+*.vsix
