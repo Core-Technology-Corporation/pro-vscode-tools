@@ -2,7 +2,7 @@
 
 Extensión de Visual Studio Code con utilidades de productividad para el día a día: conversión de JSON a interfaces TypeScript, generación de componentes, creación de estructura de proyecto, comandos rápidos de terminal y una vista **Quick Actions** en el Explorador.
 
-> Estado: versión `0.0.1`, marcada como *Unreleased* en el [CHANGELOG](CHANGELOG.md). Todavía no se publicó en el Marketplace.
+> Estado: versión `0.0.1`, publicada en el Marketplace como `alvarosiles.pro-vscode-tools`.
 
 ## Funcionalidades
 

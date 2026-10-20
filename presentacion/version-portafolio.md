@@ -66,11 +66,11 @@ Sin acceso a red. Solo escribe dentro del workspace abierto y los comandos de te
 
 - Evitar que Generate Component sobrescriba archivos existentes.
 - Hacer configurables las plantillas de componentes y la estructura del proyecto.
-- Ampliar las pruebas y publicar en el Marketplace.
+- Ampliar la cobertura de pruebas.
 
 ## Estado
 
-En desarrollo: versión `0.0.1`, *Unreleased*. Existe un `.vsix` empaquetado.
+Publicada en el Visual Studio Code Marketplace como `alvarosiles.pro-vscode-tools` (versión inicial `0.0.1`, verificado el 2026-10-20). El CHANGELOG todavía la marca como *Unreleased*.
 
 ## Capturas
 

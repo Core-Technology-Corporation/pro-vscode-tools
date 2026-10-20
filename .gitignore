@@ -4,3 +4,6 @@ node_modules/
 *.vsix
 .vscode-test/
 *.log
+
+# Paquete publicado para descarga desde la página de presentación
+!presentacion/descarga/*.vsix
